@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@keyframes bgScrollChange {
+    from {
+        background-color: #121212; /* Cor inicial no topo */
+    }
+    to {
+        background-color: #1a1921; /* Cor final ao descer a página (ajusta para o tom que gostares) */
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1d24;
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    animation: bgScrollChange linear auto;
+    animation-timeline: scroll(root);
+}
+
+/* Header */
+.profile-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #fff9ed;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 38px;
+    border: 1px solid #33323c;
+    padding: 10px 25px;
+    border-radius: 8px;
+    background-color: #25242d;
+    display: inline-block;
+}
+
+.name_hover {
+    transition: transform 0.3 ease;
+}
+
+.dev {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #dacebb;
+    transform: translateY(-8px) scale(0.98);
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s cubic-bezier(0.16, 1, 0.8, 1),
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.4s linear;
+}
+
+.name_hover:hover + .dev{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1.1);
+}
+
+/* Container*/
+main {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Sobre Mim */
+.about-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-me {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-me-text {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #cccccc;
+    max-width: 750px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.about-me-text:hover {
+    transform: scale(1.03);
+}
+
+/* Redes Sociais e Currículo */
+.all_media {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.my_media {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.ul li a img {
+    width: 32px;
+    height: 32px;
+    filter: invert(1);
+}
+
+
+.git_hub a:hover {
+    color: #a66eff;
+    transform: scale(1.08);
+}
+
+.linkedin a:hover {
+    color: #3882f0;
+    transform: scale(1.08);
+}
+
+.curr a:hover {
+    color: #f07c56;
+    transform: scale(1.08);
+}
+
+/* Projetos */
+.projects {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.project_title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.project_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.project_list li a {
+    font-size: 22px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.project_list li a:hover {
+    color: #deffad;
+    transform: scale(1.05);
+}
+
+
+/* Stack */
+.my_stack {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.stack_title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f07c56;
+}
+
+.python_logo {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.python_logo:hover {
+    transform: scale(1.03);
+}
+
+.logos {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.8s;
+    margin: 20px 8px;
+}
+
+.logos:hover {
+    transform: scale(1.5);
+}
